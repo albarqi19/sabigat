@@ -1,0 +1,14 @@
+{
+  "name": "سابغات للحلول القانونية",
+  "short_name": "سابغات",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#37464e",
+  "theme_color": "#37464e",
+  "icons": [
+    { "src": "assets/img/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
