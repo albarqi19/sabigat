@@ -15,7 +15,7 @@ from pathlib import Path
 
 SRC = Path(__file__).resolve().parent
 OUT = SRC.parent
-V = "1"
+V = "2"
 P = json.loads((SRC / "parts.json").read_text(encoding="utf-8"))
 
 AR_DIGITS = str.maketrans("0123456789", "٠١٢٣٤٥٦٧٨٩")
@@ -103,7 +103,9 @@ def fly_html():
 # ---------------------------------------------------------------- الصفحات
 NAV = [("home", "index.html", "الرئيسية"), ("about", "about.html", "لماذا سابغات"),
        ("services", "services.html", "خدماتنا"), ("contact", "contact.html", "تواصل معنا")]
-PORTAL = "https://sabigat.com/Fares/authentication/login"
+# بوابة الدخول في الرائد: نطاق الشركة نفسه (الدخول من جذر المنصة لا يمر إلا لمالك الشركة).
+# للعملاء والموظفين معا: صفحة دخول واحدة برقم الهوية والرقم السري.
+PORTAL = "https://www-sabigat-com.alraedlaw.com/login"
 
 CTAS = {
     "home": ("اطلب خدمتك القانونية اليوم", "أخبرنا باحتياجك، وسيتواصل معك المختص من فريق سابغات.", "mail"),
@@ -217,7 +219,7 @@ def main():
             "JSONLD": JSONLD if key == "home" else "",
             "FLY": fly_html() if key == "home" else "",
             "PAGE": key, "NAV": nav_html(key, b), "MENU": menu_html(key, b),
-            "B": b, "V": V, "SPRITE": sprite,
+            "B": b, "V": V, "SPRITE": sprite, "PORTAL": PORTAL,
             "MARK_W": str(MARK_BOX[2]), "MARK_H": str(MARK_BOX[3]),
             "CALLI_W": str(CALLI_BOX[2]), "CALLI_H": str(CALLI_BOX[3]),
             "SCALE_VB": vb(SCALE_BOX), "PEN_VB": vb(PEN_BOX),
