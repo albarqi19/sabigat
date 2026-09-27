@@ -1,186 +1,231 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>تواصل معنا | سابغات للحلول القانونية</title>
-  <meta name="description" content="اطلب خدمتك القانونية من سابغات — راسلنا عبر البريد الإلكتروني أو ادخل بوابة العملاء على منصة سابغات لمتابعة طلباتك وقضاياك.">
+  <meta name="description" content="اطلب خدمتك القانونية من سابغات، راسلنا عبر البريد الإلكتروني أو ادخل بوابة العملاء على منصة سابغات لمتابعة طلباتك وقضاياك.">
   <link rel="canonical" href="https://sabigat.com/contact">
-  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="preload" href="assets/fonts/ibm-plex-arabic-400-arabic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/amiri-700-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-arabic-700-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css?v=1">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="سابغات للحلول القانونية">
   <meta property="og:locale" content="ar_SA">
   <meta property="og:title" content="تواصل معنا | سابغات للحلول القانونية">
-  <meta property="og:description" content="اطلب خدمتك القانونية من سابغات — عبر البريد الإلكتروني أو بوابة العملاء.">
+  <meta property="og:description" content="اطلب خدمتك القانونية من سابغات، عبر البريد الإلكتروني أو بوابة العملاء.">
   <meta property="og:url" content="https://sabigat.com/contact">
   <meta property="og:image" content="https://sabigat.com/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="تواصل معنا | سابغات للحلول القانونية">
-  <meta name="twitter:description" content="اطلب خدمتك القانونية من سابغات — عبر البريد الإلكتروني أو بوابة العملاء.">
+  <meta name="twitter:description" content="اطلب خدمتك القانونية من سابغات، عبر البريد الإلكتروني أو بوابة العملاء.">
   <meta name="twitter:image" content="https://sabigat.com/assets/img/og-image.png">
-  <meta name="theme-color" content="#37464e">
+  <meta name="theme-color" content="#2b373e">
   <meta name="geo.region" content="SA">
+  <!-- TODO: من العميل — geo.placename (مدينة المقر) -->
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <script>document.documentElement.className += ' js';</script>
+  <script>
+    /* قبل الرسم: حالة الحركة والانتقال، وأمان إن لم يعمل ملف الحركة */
+    (function (h) {
+      h.className = h.className.replace('no-js', 'js');
+      try {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('rm');
+        if (sessionStorage.getItem('sg-nav')) { h.classList.add('is-arriving'); sessionStorage.removeItem('sg-nav'); }
+        if (sessionStorage.getItem('sg-intro')) h.classList.add('intro-seen');
+      } catch (e) {}
+      setTimeout(function () { if (!h.classList.contains('ready')) h.classList.add('static'); }, 3500);
+    })(document.documentElement);
+  </script>
 </head>
-<body>
+<body class="p-contact">
+  <a class="skip" href="#main">تخط إلى المحتوى</a>
 
-  <header class="site-header is-solid">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="سابغات للحلول القانونية — الرئيسية">
-        <img src="assets/img/logo-mark.webp" alt="شعار سابغات" width="337" height="284">
-        <span class="brand-text">
-          <span class="brand-name">سابغات</span>
-          <span class="brand-tag">للحلول القانونية</span>
-        </span>
+  <div class="curtain" aria-hidden="true">
+    <svg class="curtain__mark" viewBox="0 0 308 265" focusable="false"><use href="assets/img/sprite.svg?v=1#mark"/></svg>
+  </div>
+
+  <header class="hdr" id="top">
+    <div class="hdr__in wrap">
+      <a class="brand" href="index.html" aria-label="سابغات للحلول القانونية، الصفحة الرئيسية">
+        <svg class="brand__mark" viewBox="0 0 308 265" aria-hidden="true" focusable="false"><use href="assets/img/sprite.svg?v=1#mark"/></svg>
+        <span class="brand__name"><b>سابغات</b><small>للحلول القانونية</small></span>
       </a>
-      <nav class="main-nav" aria-label="التنقل الرئيسي">
+      <nav class="nav" aria-label="التنقل الرئيسي">
         <ul>
           <li><a href="index.html">الرئيسية</a></li>
           <li><a href="about.html">لماذا سابغات</a></li>
           <li><a href="services.html">خدماتنا</a></li>
-          <li><a href="contact.html" class="active" aria-current="page">تواصل معنا</a></li>
+          <li><a href="contact.html" aria-current="page">تواصل معنا</a></li>
           <li><a href="https://sabigat.com/Fares/authentication/login">بوابة العملاء</a></li>
         </ul>
       </nav>
-      <div class="header-cta">
-        <a class="btn btn-navy" href="#service-form">اطلب خدمة</a>
-      </div>
-      <button class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a class="btn btn--brass btn--sm hdr__cta" href="contact.html"><span>اطلب خدمة</span></a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="فتح القائمة"><span></span><span></span></button>
     </div>
+    <span class="hdr__progress" aria-hidden="true"></span>
   </header>
 
-  <main>
+  <div class="menu" id="menu" inert>
+    <nav class="menu__nav" aria-label="قائمة الجوال">
+      <ul class="menu__links">
+        <li style="--i:1"><a href="index.html"><i>١</i>الرئيسية</a></li>
+        <li style="--i:2"><a href="about.html"><i>٢</i>لماذا سابغات</a></li>
+        <li style="--i:3"><a href="services.html"><i>٣</i>خدماتنا</a></li>
+        <li style="--i:4"><a href="contact.html" aria-current="page"><i>٤</i>تواصل معنا</a></li>
+      </ul>
+    </nav>
+    <div class="menu__foot">
+      <a class="btn btn--brass" href="contact.html"><span>اطلب خدمة</span></a>
+      <a class="menu__mail" href="mailto:info@sabigat.com" dir="ltr">info@sabigat.com</a>
+      <a class="menu__portal" href="https://sabigat.com/Fares/authentication/login">بوابة العملاء</a>
+    </div>
+  </div>
 
-    <!-- ================= بطل الصفحة ================= -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="crumbs" aria-label="مسار الصفحة">
-          <a href="index.html">الرئيسية</a>
-          <span aria-hidden="true">←</span>
-          <span aria-current="page">تواصل معنا</span>
-        </nav>
-        <h1>اطلب خدمتك القانونية</h1>
-        <p>أخبرنا باحتياجك، وسيتواصل معك المختص من فريق سابغات في أقرب وقت.</p>
+  <main id="main">
+    <!-- ================= بطل الصفحة: القلم يخط سطرا ================= -->
+    <section class="phero phero--contact">
+      <div class="phero__in wrap">
+        <div class="phero__text">
+          <nav class="crumbs" aria-label="مسار الصفحة" data-rise>
+            <a href="index.html">الرئيسية</a><span aria-hidden="true">/</span><span aria-current="page">تواصل معنا</span>
+          </nav>
+          <h1 class="phero__t" data-words>اطلب خدمتك القانونية</h1>
+          <p class="phero__lead" data-rise>أخبرنا باحتياجك، وسيتواصل معك المختص من فريق سابغات في أقرب وقت.</p>
+        </div>
+        <div class="phero__art art-pen" aria-hidden="true">
+          <svg viewBox="12 40 184 240" focusable="false">
+            <use class="pen-body" href="assets/img/sprite.svg?v=1#p-pillar"/>
+            <use class="pen-line" href="assets/img/sprite.svg?v=1#p-c3"/>
+            <use class="pen-dot" href="assets/img/sprite.svg?v=1#p-d2"/>
+            <use class="pen-dot" href="assets/img/sprite.svg?v=1#p-d3"/>
+          </svg>
+        </div>
       </div>
     </section>
 
-    <!-- ================= التواصل + النموذج ================= -->
-    <section class="section">
-      <div class="container contact-grid">
-
-        <div class="reveal">
-          <p class="eyebrow">قنوات التواصل</p>
-          <div class="contact-info-item">
-            <p class="label">البريد الإلكتروني</p>
-            <p class="value"><a href="mailto:info@sabigat.com">info@sabigat.com</a></p>
+    <!-- ================= القنوات والنموذج ================= -->
+    <section class="contact sec">
+      <div class="wrap contact__grid">
+        <div class="channels">
+          <h2 class="eyebrow" data-rise>قنوات التواصل</h2>
+          <div class="ch" data-rise>
+            <p class="ch__l">البريد الإلكتروني</p>
+            <div class="ch__row">
+              <a class="ch__v" href="mailto:info@sabigat.com" dir="ltr">info@sabigat.com</a>
+              <button class="copy" type="button" data-copy="info@sabigat.com" aria-label="نسخ البريد الإلكتروني">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/img/sprite.svg?v=1#i-copy"/></svg><span>نسخ</span>
+              </button>
+            </div>
           </div>
-          <div class="contact-info-item">
-            <p class="label">بوابة العملاء</p>
-            <p class="value"><a href="https://sabigat.com/Fares/authentication/login">الدخول إلى منصة سابغات</a></p>
+          <div class="ch" data-rise>
+            <p class="ch__l">بوابة العملاء</p>
+            <a class="ch__v ch__link" href="https://sabigat.com/Fares/authentication/login"><span>الدخول إلى منصة سابغات</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/img/sprite.svg?v=1#i-arrow"/></svg></a>
           </div>
-          <div class="contact-info-item">
-            <p class="label">نطاق الخدمة</p>
-            <p class="value">المملكة العربية السعودية وخارجها</p>
+          <div class="ch" data-rise>
+            <p class="ch__l">نطاق الخدمة</p>
+            <p class="ch__v">المملكة العربية السعودية وخارجها</p>
           </div>
           <!-- TODO: من العميل — رقم الهاتف tel: / واتساب wa.me / العنوان الوطني / ساعات العمل -->
         </div>
 
-        <div class="form-card reveal reveal-d1">
-          <form id="service-form" action="mailto:info@sabigat.com" method="post" enctype="text/plain">
-            <div class="form-row">
-              <div class="field">
-                <label for="f-name">الاسم الكامل</label>
-                <input type="text" id="f-name" name="name" autocomplete="name" required>
-              </div>
-              <div class="field">
-                <label for="f-phone">رقم الجوال</label>
-                <input type="tel" id="f-phone" name="phone" autocomplete="tel" dir="ltr" required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label for="f-email">البريد الإلكتروني</label>
-                <input type="email" id="f-email" name="email" autocomplete="email" dir="ltr" required>
-              </div>
-              <div class="field">
-                <label for="f-service">الخدمة المطلوبة</label>
-                <select id="f-service" name="service" required>
-                  <option value="" selected disabled>اختر الخدمة</option>
-                  <option value="المنشآت والكيانات">المنشآت والكيانات</option>
-                  <option value="القطاع غير الربحي">القطاع غير الربحي</option>
-                  <option value="أعمال المنازعات">أعمال المنازعات</option>
-                  <option value="أعمال التوثيق">أعمال التوثيق</option>
-                  <option value="استشارة قانونية">استشارة قانونية</option>
-                  <option value="أخرى">أخرى</option>
-                </select>
-              </div>
+        <form class="form" id="service-form" action="mailto:info@sabigat.com" method="post" enctype="text/plain" data-rise>
+          <div class="form__row">
+            <div class="field">
+              <input type="text" id="f-name" name="name" autocomplete="name" placeholder=" " required>
+              <label for="f-name">الاسم الكامل</label>
             </div>
             <div class="field">
-              <label for="f-message">تفاصيل الطلب</label>
-              <textarea id="f-message" name="message" required></textarea>
+              <input type="tel" id="f-phone" name="phone" autocomplete="tel" dir="ltr" placeholder=" " required>
+              <label for="f-phone">رقم الجوال</label>
             </div>
-            <button class="btn btn-navy" type="submit">إرسال الطلب</button>
-            <p class="form-note" id="form-done" hidden>سيفتح برنامج البريد لديك برسالةٍ جاهزة — أرسلها لتصلنا مباشرةً.</p>
-            <p class="form-note">بإرسالك الطلب سيُفتح برنامج البريد لديك برسالة موجهة إلى <span dir="ltr">info@sabigat.com</span> — يمكنك أيضًا مراسلتنا مباشرةً على <a href="mailto:info@sabigat.com" style="color:var(--gold-deep);font-weight:600"><span dir="ltr">info@sabigat.com</span></a></p>
-          </form>
-        </div>
-
+          </div>
+          <div class="field">
+            <input type="email" id="f-email" name="email" autocomplete="email" dir="ltr" placeholder=" " required>
+            <label for="f-email">البريد الإلكتروني</label>
+          </div>
+          <fieldset class="pick">
+            <legend>الخدمة المطلوبة</legend>
+            <div class="pick__opts">
+              <label><input type="radio" name="service" value="المنشآت والكيانات" required><span>المنشآت والكيانات</span></label>
+              <label><input type="radio" name="service" value="القطاع غير الربحي"><span>القطاع غير الربحي</span></label>
+              <label><input type="radio" name="service" value="أعمال المنازعات"><span>أعمال المنازعات</span></label>
+              <label><input type="radio" name="service" value="أعمال التوثيق"><span>أعمال التوثيق</span></label>
+              <label><input type="radio" name="service" value="استشارة قانونية"><span>استشارة قانونية</span></label>
+              <label><input type="radio" name="service" value="أخرى"><span>أخرى</span></label>
+            </div>
+          </fieldset>
+          <div class="field field--area">
+            <textarea id="f-message" name="message" rows="5" placeholder=" " required></textarea>
+            <label for="f-message">تفاصيل الطلب</label>
+          </div>
+          <div class="form__foot">
+            <button class="btn btn--slate" type="submit"><span>إرسال الطلب</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/img/sprite.svg?v=1#i-arrow"/></svg></button>
+            <p class="form__note" id="form-done" role="status" hidden>سيفتح برنامج البريد لديك برسالة جاهزة، أرسلها لتصلنا مباشرة.</p>
+          </div>
+          <p class="form__note">بإرسالك الطلب سيفتح برنامج البريد لديك برسالة موجهة إلى <span dir="ltr">info@sabigat.com</span>، ويمكنك أيضا مراسلتنا مباشرة على <a href="mailto:info@sabigat.com" dir="ltr">info@sabigat.com</a></p>
+        </form>
       </div>
     </section>
-
   </main>
 
-  <!-- ================= التذييل ================= -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="assets/img/logo-mark.webp" alt="شعار سابغات" width="337" height="284" loading="lazy">
-          <p>شركة سابغات للحلول القانونية — نخبة من الخبراء والمستشارين والباحثين الشرعيين والقانونيين، بثقة المؤسسات والأفراد داخل المملكة وخارجها.</p>
+  <footer class="ftr">
+    <div class="wrap">
+      <div class="ftr__grid">
+        <div class="ftr__brand">
+          <a class="brand" href="index.html" aria-label="سابغات للحلول القانونية، الصفحة الرئيسية">
+            <svg class="brand__mark" viewBox="0 0 308 265" aria-hidden="true" focusable="false"><use href="assets/img/sprite.svg?v=1#mark"/></svg>
+            <span class="brand__name"><b>سابغات</b><small>للحلول القانونية</small></span>
+          </a>
+          <p>شركة سابغات للحلول القانونية، نخبة من الخبراء والمستشارين والباحثين الشرعيين والقانونيين، بثقة المؤسسات والأفراد داخل المملكة وخارجها.</p>
         </div>
-        <div class="footer-col">
-          <h4>الموقع</h4>
+        <nav class="ftr__col" aria-labelledby="f-site">
+          <h2 class="ftr__h" id="f-site">الموقع</h2>
           <ul>
             <li><a href="index.html">الرئيسية</a></li>
             <li><a href="about.html">لماذا سابغات</a></li>
             <li><a href="services.html">خدماتنا</a></li>
             <li><a href="contact.html">تواصل معنا</a></li>
           </ul>
-        </div>
-        <div class="footer-col">
-          <h4>خدماتنا</h4>
+        </nav>
+        <nav class="ftr__col" aria-labelledby="f-svc">
+          <h2 class="ftr__h" id="f-svc">خدماتنا</h2>
           <ul>
             <li><a href="services.html#entities">المنشآت والكيانات</a></li>
             <li><a href="services.html#nonprofit">القطاع غير الربحي</a></li>
             <li><a href="services.html#disputes">أعمال المنازعات</a></li>
             <li><a href="services.html#notarization">أعمال التوثيق</a></li>
           </ul>
-        </div>
-        <div class="footer-col">
-          <h4>تواصل</h4>
+        </nav>
+        <div class="ftr__col">
+          <h2 class="ftr__h">تواصل</h2>
           <ul>
-            <li><a href="mailto:info@sabigat.com">info@sabigat.com</a></li>
+            <li><a href="mailto:info@sabigat.com" dir="ltr">info@sabigat.com</a></li>
             <li><a href="https://sabigat.com/Fares/authentication/login">بوابة العملاء</a></li>
             <li><a href="https://sabigat.com/Fares/admin/authentication">بوابة الموظفين</a></li>
-            <!-- TODO: من العميل — رقم الهاتف tel: والعنوان الوطني -->
+            <!-- TODO: من العميل — رقم الهاتف tel: وواتساب wa.me والعنوان الوطني -->
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span><span dir="ltr">© <span id="year">2026</span></span> سابغات للحلول القانونية — جميع الحقوق محفوظة</span>
+      <div class="ftr__word" aria-hidden="true">
+        <svg viewBox="0 0 312 176" focusable="false"><use href="assets/img/sprite.svg?v=1#calli"/></svg>
+      </div>
+      <div class="ftr__bottom">
+        <span><span dir="ltr">© <span data-year>2026</span></span> سابغات للحلول القانونية، جميع الحقوق محفوظة</span>
+        <!-- TODO: من العميل — رقم الترخيص المهني ورقم السجل التجاري -->
         <span>المملكة العربية السعودية</span>
+        <a class="totop" href="#top"><span>العودة للأعلى</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/img/sprite.svg?v=1#i-up"/></svg></a>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/vendor/gsap.min.js?v=3.15.0" defer></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js?v=3.15.0" defer></script>
+  <script src="assets/js/vendor/lenis.min.js?v=1.3.26" defer></script>
+  <script src="assets/js/main.js?v=1" defer></script>
 </body>
 </html>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>لماذا سابغات | سابغات للحلول القانونية</title>
   <meta name="description" content="تعرف على شركة سابغات للحلول القانونية: رؤيتنا وقيمنا وهدفنا، ومسارات خبرتنا في الدراسات والاستشارات والمنازعات والكيانات، وفريق العمل من المستشارين والمحامين.">
   <link rel="canonical" href="https://sabigat.com/about">
-  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="preload" href="assets/fonts/ibm-plex-arabic-400-arabic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/amiri-700-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-arabic-700-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css?v=1">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="سابغات للحلول القانونية">
   <meta property="og:locale" content="ar_SA">
@@ -22,116 +22,162 @@
   <meta name="twitter:title" content="لماذا سابغات | سابغات للحلول القانونية">
   <meta name="twitter:description" content="رؤيتنا وقيمنا ومسارات خبرتنا وفريق العمل من المستشارين والمحامين.">
   <meta name="twitter:image" content="https://sabigat.com/assets/img/og-image.png">
-  <meta name="theme-color" content="#37464e">
+  <meta name="theme-color" content="#2b373e">
   <meta name="geo.region" content="SA">
+  <!-- TODO: من العميل — geo.placename (مدينة المقر) -->
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <script>document.documentElement.className += ' js';</script>
+  <script>
+    /* قبل الرسم: حالة الحركة والانتقال، وأمان إن لم يعمل ملف الحركة */
+    (function (h) {
+      h.className = h.className.replace('no-js', 'js');
+      try {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('rm');
+        if (sessionStorage.getItem('sg-nav')) { h.classList.add('is-arriving'); sessionStorage.removeItem('sg-nav'); }
+        if (sessionStorage.getItem('sg-intro')) h.classList.add('intro-seen');
+      } catch (e) {}
+      setTimeout(function () { if (!h.classList.contains('ready')) h.classList.add('static'); }, 3500);
+    })(document.documentElement);
+  </script>
 </head>
-<body>
+<body class="p-about">
+  <a class="skip" href="#main">تخط إلى المحتوى</a>
 
-  <header class="site-header is-solid">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="سابغات للحلول القانونية — الرئيسية">
-        <img src="assets/img/logo-mark.webp" alt="شعار سابغات" width="337" height="284">
-        <span class="brand-text">
-          <span class="brand-name">سابغات</span>
-          <span class="brand-tag">للحلول القانونية</span>
-        </span>
+  <div class="curtain" aria-hidden="true">
+    <svg class="curtain__mark" viewBox="0 0 308 265" focusable="false"><use href="assets/img/sprite.svg?v=1#mark"/></svg>
+  </div>
+
+  <header class="hdr" id="top">
+    <div class="hdr__in wrap">
+      <a class="brand" href="index.html" aria-label="سابغات للحلول القانونية، الصفحة الرئيسية">
+        <svg class="brand__mark" viewBox="0 0 308 265" aria-hidden="true" focusable="false"><use href="assets/img/sprite.svg?v=1#mark"/></svg>
+        <span class="brand__name"><b>سابغات</b><small>للحلول القانونية</small></span>
       </a>
-      <nav class="main-nav" aria-label="التنقل الرئيسي">
+      <nav class="nav" aria-label="التنقل الرئيسي">
         <ul>
           <li><a href="index.html">الرئيسية</a></li>
-          <li><a href="about.html" class="active" aria-current="page">لماذا سابغات</a></li>
+          <li><a href="about.html" aria-current="page">لماذا سابغات</a></li>
           <li><a href="services.html">خدماتنا</a></li>
           <li><a href="contact.html">تواصل معنا</a></li>
           <li><a href="https://sabigat.com/Fares/authentication/login">بوابة العملاء</a></li>
         </ul>
       </nav>
-      <div class="header-cta">
-        <a class="btn btn-navy" href="contact.html">اطلب خدمة</a>
-      </div>
-      <button class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a class="btn btn--brass btn--sm hdr__cta" href="contact.html"><span>اطلب خدمة</span></a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="فتح القائمة"><span></span><span></span></button>
     </div>
+    <span class="hdr__progress" aria-hidden="true"></span>
   </header>
 
-  <main>
+  <div class="menu" id="menu" inert>
+    <nav class="menu__nav" aria-label="قائمة الجوال">
+      <ul class="menu__links">
+        <li style="--i:1"><a href="index.html"><i>١</i>الرئيسية</a></li>
+        <li style="--i:2"><a href="about.html" aria-current="page"><i>٢</i>لماذا سابغات</a></li>
+        <li style="--i:3"><a href="services.html"><i>٣</i>خدماتنا</a></li>
+        <li style="--i:4"><a href="contact.html"><i>٤</i>تواصل معنا</a></li>
+      </ul>
+    </nav>
+    <div class="menu__foot">
+      <a class="btn btn--brass" href="contact.html"><span>اطلب خدمة</span></a>
+      <a class="menu__mail" href="mailto:info@sabigat.com" dir="ltr">info@sabigat.com</a>
+      <a class="menu__portal" href="https://sabigat.com/Fares/authentication/login">بوابة العملاء</a>
+    </div>
+  </div>
 
-    <!-- ================= بطل الصفحة ================= -->
-    <section class="page-hero">
-      <div class="container">
-        <nav class="crumbs" aria-label="مسار الصفحة">
-          <a href="index.html">الرئيسية</a>
-          <span aria-hidden="true">←</span>
-          <span aria-current="page">لماذا سابغات</span>
-        </nav>
-        <h1>ثقةٌ بُنيت على الخبرة والإتقان</h1>
-        <p>سابغات إحدى الجهات الرائدة في المملكة العربية السعودية في مجالها، بفريقٍ من نخبة الخبراء والمستشارين والباحثين الشرعيين والقانونيين.</p>
+  <main id="main">
+    <!-- ================= بطل الصفحة: الميزان ================= -->
+    <section class="phero phero--about">
+      <div class="phero__in wrap">
+        <div class="phero__text">
+          <nav class="crumbs" aria-label="مسار الصفحة" data-rise>
+            <a href="index.html">الرئيسية</a><span aria-hidden="true">/</span><span aria-current="page">لماذا سابغات</span>
+          </nav>
+          <h1 class="phero__t" data-words>ثقة بنيت على الخبرة والإتقان</h1>
+          <p class="phero__lead" data-rise>سابغات إحدى الجهات الرائدة في المملكة العربية السعودية في مجالها، بفريق من نخبة الخبراء والمستشارين والباحثين الشرعيين والقانونيين.</p>
+        </div>
+        <div class="phero__art art-scales" aria-hidden="true">
+          <svg viewBox="50 8 226 146" focusable="false">
+            <use class="sc-pillar" href="assets/img/sprite.svg?v=1#p-pillar"/>
+            <g class="sc-panL"><use href="assets/img/sprite.svg?v=1#p-panL"/></g>
+            <g class="sc-panR"><use href="assets/img/sprite.svg?v=1#p-panR"/></g>
+            <g class="sc-beam"><use href="assets/img/sprite.svg?v=1#p-beam"/></g>
+          </svg>
+        </div>
       </div>
     </section>
 
     <!-- ================= من نحن ================= -->
-    <section class="section">
-      <div class="container about-grid">
-        <div class="about-text reveal">
-          <p class="eyebrow">من نحن</p>
-          <h2 class="section-title">نخبة الخبراء والمستشارين والباحثين</h2>
-          <p>تُعد شركة سابغات إحدى الجهات الرائدة في المملكة العربية السعودية في مجالها، حيث تتميز بفريق من نخبة الخبراء والمستشارين والباحثين الشرعيين والقانونيين المتخصصين في مختلف المجالات الشرعية والقانونية، مما حظيت بثقة الكثير من المؤسسات والأفراد داخل المملكة العربية السعودية وخارجها.</p>
-          <p>يقدم فريقنا الخدمات القانونية المختلفة في إدارة المشاريع، وصياغة العقود، ومراجعة اللوائح، وتأسيس الشركات، وقسمة التركات، وأعمال الترافع أمام القضاء، وتسوية النزاعات وديًا، وغير ذلك.</p>
-        </div>
-        <div class="about-media reveal reveal-d1">
-          <div class="frame">
-            <img src="assets/img/logo-full.webp" alt="الهوية البصرية لشركة سابغات للحلول القانونية" width="337" height="408" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= الرؤية والقيم والهدف ================= -->
-    <section class="section dark">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">أساس عملنا</p>
-          <h2 class="section-title">رؤيتنا وقيمنا وهدفنا</h2>
-        </div>
-        <div class="values-grid">
-          <article class="value-card reveal">
-            <span class="num">٠١</span>
-            <h3>رؤيتنا</h3>
-            <p>إنجاز المهمات القانونية باحترافٍ وتميز، والعمل على التحديث والتطوير لكل ما من شأنه الرقي بمنظومة العمل القانونية.</p>
-          </article>
-          <article class="value-card reveal reveal-d1">
-            <span class="num">٠٢</span>
-            <h3>قيمنا</h3>
-            <p>الالتزام بجودة الخدمة، وإتقان المهمة، والمساهمة في تحقيق العدالة.</p>
-          </article>
-          <article class="value-card reveal reveal-d2">
-            <span class="num">٠٣</span>
-            <h3>هدفنا</h3>
-            <p>تقديم الدعم القانوني المتميز بما يضمن توفير الحماية القانونية اللازمة لعملائنا من الأفراد والمؤسسات والشركات، وفق ما تقتضيه الأنظمة والمواثيق المحلية أو الدولية.</p>
-          </article>
+    <section class="about sec">
+      <div class="wrap about__grid">
+        <header class="about__head">
+          <p class="eyebrow" data-rise>من نحن</p>
+          <h2 class="h2" data-words>نخبة الخبراء والمستشارين والباحثين</h2>
+        </header>
+        <div class="about__body">
+          <p class="lead about__lead" data-rise>تعد شركة سابغات إحدى الجهات الرائدة في المملكة العربية السعودية في مجالها، حيث تتميز بفريق من نخبة الخبراء والمستشارين والباحثين الشرعيين والقانونيين المتخصصين في مختلف المجالات الشرعية والقانونية، مما حظيت بثقة الكثير من المؤسسات والأفراد داخل المملكة العربية السعودية وخارجها.</p>
+          <p class="about__intro" data-rise>يقدم فريقنا الخدمات القانونية المختلفة في:</p>
+          <ul class="chips" data-stagger>
+            <li>إدارة المشاريع</li>
+            <li>صياغة العقود</li>
+            <li>مراجعة اللوائح</li>
+            <li>تأسيس الشركات</li>
+            <li>قسمة التركات</li>
+            <li>أعمال الترافع أمام القضاء</li>
+            <li>تسوية النزاعات وديا</li>
+          </ul>
+          <p class="about__more" data-rise>وغير ذلك.</p>
         </div>
       </div>
     </section>
 
-    <!-- ================= مسارات الخبرة ================= -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">خبراتنا</p>
-          <h2 class="section-title">مسارات الخبرة</h2>
-          <p class="lead">تعتمد شركة سابغات الحماية القانونية لعملائها، فهي تقدم الرعاية الوقائية من المخاطر والتبعات القانونية المتوقعة، وعلى هذا الأساس تكرست خبرة فريقنا في تهيئة البيئة الآمنة للعميل في أنشطته وعلاقته بالغير وفق ما تكفله الأنظمة، وذلك ضمن عدة مسارات.</p>
-        </div>
-        <div class="tracks">
-          <div class="track reveal">
-            <span class="idx">٠١</span>
-            <div>
-              <h3>الدراسات والاستشارات</h3>
-              <p class="track-desc">بناءُ البيئة النظامية السليمة للمنشأة قبل نشوء النزاع.</p>
+    <!-- ================= أساس عملنا: بطاقات تتراكم ================= -->
+    <section class="stack dark sec">
+      <div class="wrap">
+        <header class="shead">
+          <p class="eyebrow" data-rise>أساس عملنا</p>
+          <h2 class="h2" data-words>رؤيتنا وقيمنا وهدفنا</h2>
+        </header>
+        <div class="stack__cards">
+          <article class="scard" style="--i:0">
+            <span class="scard__n" aria-hidden="true">١</span>
+            <div class="scard__body">
+              <h3 class="scard__t">رؤيتنا</h3>
+              <p>إنجاز المهمات القانونية باحتراف وتميز، والعمل على التحديث والتطوير لكل ما من شأنه الرقي بمنظومة العمل القانونية.</p>
             </div>
-            <ul>
+          </article>
+          <article class="scard" style="--i:1">
+            <span class="scard__n" aria-hidden="true">٢</span>
+            <div class="scard__body">
+              <h3 class="scard__t">قيمنا</h3>
+              <p>الالتزام بجودة الخدمة، وإتقان المهمة، والمساهمة في تحقيق العدالة.</p>
+            </div>
+          </article>
+          <article class="scard" style="--i:2">
+            <span class="scard__n" aria-hidden="true">٣</span>
+            <div class="scard__body">
+              <h3 class="scard__t">هدفنا</h3>
+              <p>تقديم الدعم القانوني المتميز بما يضمن توفير الحماية القانونية اللازمة لعملائنا من الأفراد والمؤسسات والشركات، وفق ما تقتضيه الأنظمة والمواثيق المحلية أو الدولية.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= مسارات الخبرة: تبويبات ================= -->
+    <section class="paths sec">
+      <div class="wrap">
+        <header class="shead">
+          <p class="eyebrow" data-rise>خبراتنا</p>
+          <h2 class="h2" data-words>مسارات الخبرة</h2>
+          <p class="lead" data-rise>تعتمد شركة سابغات الحماية القانونية لعملائها، فهي تقدم الرعاية الوقائية من المخاطر والتبعات القانونية المتوقعة، وعلى هذا الأساس تكرست خبرة فريقنا في تهيئة البيئة الآمنة للعميل في أنشطته وعلاقته بالغير وفق ما تكفله الأنظمة، وذلك ضمن عدة مسارات.</p>
+        </header>
+        <div class="tabs" data-tabs>
+          <section class="tabs__panel" id="path-1">
+            <h3 class="tabs__t"><span class="tabs__n" aria-hidden="true">١</span>الدراسات والاستشارات</h3>
+            <p class="tabs__d">بناء البيئة النظامية السليمة للمنشأة قبل نشوء النزاع.</p>
+            <ul class="tabs__list">
               <li>صياغة الأنظمة واللوائح ومراجعتها</li>
               <li>صياغة النماذج والسياسات الداخلية</li>
               <li>إعداد الأدلة الإجرائية ومراجعتها</li>
@@ -139,14 +185,11 @@
               <li>تقديم الاستشارات الشرعية والقانونية</li>
               <li>إنتاج الدراسات والأبحاث الشرعية والقانونية</li>
             </ul>
-          </div>
-          <div class="track reveal">
-            <span class="idx">٠٢</span>
-            <div>
-              <h3>المنازعات والتسويات</h3>
-              <p class="track-desc">تمثيلٌ قضائي وتحكيمي في مختلف مجالات النزاع ودرجاته.</p>
-            </div>
-            <ul>
+          </section>
+          <section class="tabs__panel" id="path-2">
+            <h3 class="tabs__t"><span class="tabs__n" aria-hidden="true">٢</span>المنازعات والتسويات</h3>
+            <p class="tabs__d">تمثيل قضائي وتحكيمي في مختلف مجالات النزاع ودرجاته.</p>
+            <ul class="tabs__list">
               <li>المنازعات التجارية</li>
               <li>المنازعات العمالية</li>
               <li>المنازعات الحقوقية</li>
@@ -158,14 +201,11 @@
               <li>الفصل بين النزاعات من خلال التحكيم</li>
               <li>تسوية النزاعات عبر الوسائل البديلة</li>
             </ul>
-          </div>
-          <div class="track reveal">
-            <span class="idx">٠٣</span>
-            <div>
-              <h3>الكيانات والأعمال التجارية</h3>
-              <p class="track-desc">رعايةٌ قانونية للكيان من التأسيس حتى التصفية.</p>
-            </div>
-            <ul>
+          </section>
+          <section class="tabs__panel" id="path-3">
+            <h3 class="tabs__t"><span class="tabs__n" aria-hidden="true">٣</span>الكيانات والأعمال التجارية</h3>
+            <p class="tabs__d">رعاية قانونية للكيان من التأسيس حتى التصفية.</p>
+            <ul class="tabs__list">
               <li>تأسيس الشركات والكيانات التجارية والخيرية</li>
               <li>أعمال الدمج والاستحواذ للكيانات</li>
               <li>تفعيل برامج الحوكمة</li>
@@ -174,91 +214,101 @@
               <li>صياغة العقود ومراجعتها</li>
               <li>حماية حقوق الملكية الفكرية</li>
             </ul>
-          </div>
+          </section>
         </div>
       </div>
     </section>
 
     <!-- ================= فريق العمل ================= -->
-    <section class="section alt">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">فريق سابغات</p>
-          <h2 class="section-title">الكفاءات التي تقف خلف أعمالنا</h2>
-        </div>
-        <div class="team-list reveal">
-          <div class="team-row"><span class="name">أ.د. ترحيب الدوسري</span><span class="role">رئيس مجلس الإدارة</span></div>
-          <div class="team-row"><span class="name">عبد الله بوعبيد</span><span class="role">الرئيس التنفيذي</span></div>
-          <div class="team-row"><span class="name">عبدالله الدوسري</span><span class="role">مستشار قانوني</span></div>
-          <div class="team-row"><span class="name">عبد العزيز بن صالح</span><span class="role">مستشار قانوني</span></div>
-          <div class="team-row"><span class="name">خالد أبو اثنين</span><span class="role">محامٍ</span></div>
-          <div class="team-row"><span class="name">مضر البراهيم</span><span class="role">محامٍ</span></div>
-          <div class="team-row"><span class="name">علي النامي</span><span class="role">محامٍ</span></div>
-          <div class="team-row"><span class="name">عائشة صيّاد</span><span class="role">مدير الشؤون الإدارية</span></div>
-          <div class="team-row"><span class="name">ميمونة الدوسري</span><span class="role">محامية متدربة</span></div>
-          <div class="team-row"><span class="name">نورة بوعبيد</span><span class="role">محامية متدربة</span></div>
-        </div>
+    <section class="team sec">
+      <div class="wrap">
+        <header class="shead">
+          <p class="eyebrow" data-rise>فريق سابغات</p>
+          <h2 class="h2" data-words>الكفاءات التي تقف خلف أعمالنا</h2>
+        </header>
+        <ul class="team__grid" data-stagger>
+          <li class="member member--lead"><p class="member__role">رئيس مجلس الإدارة</p><h3 class="member__name">أ.د. ترحيب الدوسري</h3></li>
+          <li class="member member--lead"><p class="member__role">الرئيس التنفيذي</p><h3 class="member__name">عبد الله بوعبيد</h3></li>
+          <li class="member"><p class="member__role">مستشار قانوني</p><h3 class="member__name">عبدالله الدوسري</h3></li>
+          <li class="member"><p class="member__role">مستشار قانوني</p><h3 class="member__name">عبد العزيز بن صالح</h3></li>
+          <li class="member"><p class="member__role">محام</p><h3 class="member__name">خالد أبو اثنين</h3></li>
+          <li class="member"><p class="member__role">محام</p><h3 class="member__name">مضر البراهيم</h3></li>
+          <li class="member"><p class="member__role">محام</p><h3 class="member__name">علي النامي</h3></li>
+          <li class="member"><p class="member__role">مدير الشؤون الإدارية</p><h3 class="member__name">عائشة صياد</h3></li>
+          <li class="member"><p class="member__role">محامية متدربة</p><h3 class="member__name">ميمونة الدوسري</h3></li>
+          <li class="member"><p class="member__role">محامية متدربة</p><h3 class="member__name">نورة بوعبيد</h3></li>
+        </ul>
       </div>
     </section>
 
     <!-- ================= دعوة ختامية ================= -->
-    <section class="section cta-band">
-      <div class="container">
-        <p class="eyebrow reveal" style="justify-content:center">ابدأ الآن</p>
-        <h2 class="section-title reveal">جاهزون لخدمتك</h2>
-        <p class="lead reveal reveal-d1">أخبرنا باحتياجك، وسيتواصل معك المختص من فريق سابغات.</p>
-        <div class="hero-actions reveal reveal-d2">
-          <a class="btn btn-navy" href="contact.html">اطلب خدمة</a>
-          <a class="btn btn-outline" href="services.html">استعرض خدماتنا</a>
+    <section class="cta sec">
+      <div class="wrap cta__in">
+        <p class="eyebrow" data-rise>ابدأ الآن</p>
+        <h2 class="h2 cta__t" data-words>جاهزون لخدمتك</h2>
+        <span class="cta__rule" aria-hidden="true"></span>
+        <p class="lead" data-rise>أخبرنا باحتياجك، وسيتواصل معك المختص من فريق سابغات.</p>
+        <div class="cta__actions" data-rise>
+          <a class="btn btn--slate" href="contact.html"><span>اطلب خدمة</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/img/sprite.svg?v=1#i-arrow"/></svg></a>
+          <a class="btn btn--line" href="services.html"><span>استعرض خدماتنا</span></a>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- ================= التذييل ================= -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="assets/img/logo-mark.webp" alt="شعار سابغات" width="337" height="284" loading="lazy">
-          <p>شركة سابغات للحلول القانونية — نخبة من الخبراء والمستشارين والباحثين الشرعيين والقانونيين، بثقة المؤسسات والأفراد داخل المملكة وخارجها.</p>
+  <footer class="ftr">
+    <div class="wrap">
+      <div class="ftr__grid">
+        <div class="ftr__brand">
+          <a class="brand" href="index.html" aria-label="سابغات للحلول القانونية، الصفحة الرئيسية">
+            <svg class="brand__mark" viewBox="0 0 308 265" aria-hidden="true" focusable="false"><use href="assets/img/sprite.svg?v=1#mark"/></svg>
+            <span class="brand__name"><b>سابغات</b><small>للحلول القانونية</small></span>
+          </a>
+          <p>شركة سابغات للحلول القانونية، نخبة من الخبراء والمستشارين والباحثين الشرعيين والقانونيين، بثقة المؤسسات والأفراد داخل المملكة وخارجها.</p>
         </div>
-        <div class="footer-col">
-          <h4>الموقع</h4>
+        <nav class="ftr__col" aria-labelledby="f-site">
+          <h2 class="ftr__h" id="f-site">الموقع</h2>
           <ul>
             <li><a href="index.html">الرئيسية</a></li>
             <li><a href="about.html">لماذا سابغات</a></li>
             <li><a href="services.html">خدماتنا</a></li>
             <li><a href="contact.html">تواصل معنا</a></li>
           </ul>
-        </div>
-        <div class="footer-col">
-          <h4>خدماتنا</h4>
+        </nav>
+        <nav class="ftr__col" aria-labelledby="f-svc">
+          <h2 class="ftr__h" id="f-svc">خدماتنا</h2>
           <ul>
             <li><a href="services.html#entities">المنشآت والكيانات</a></li>
             <li><a href="services.html#nonprofit">القطاع غير الربحي</a></li>
             <li><a href="services.html#disputes">أعمال المنازعات</a></li>
             <li><a href="services.html#notarization">أعمال التوثيق</a></li>
           </ul>
-        </div>
-        <div class="footer-col">
-          <h4>تواصل</h4>
+        </nav>
+        <div class="ftr__col">
+          <h2 class="ftr__h">تواصل</h2>
           <ul>
-            <li><a href="mailto:info@sabigat.com">info@sabigat.com</a></li>
+            <li><a href="mailto:info@sabigat.com" dir="ltr">info@sabigat.com</a></li>
             <li><a href="https://sabigat.com/Fares/authentication/login">بوابة العملاء</a></li>
             <li><a href="https://sabigat.com/Fares/admin/authentication">بوابة الموظفين</a></li>
-            <!-- TODO: من العميل — رقم الهاتف tel: والعنوان الوطني -->
+            <!-- TODO: من العميل — رقم الهاتف tel: وواتساب wa.me والعنوان الوطني -->
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span><span dir="ltr">© <span id="year">2026</span></span> سابغات للحلول القانونية — جميع الحقوق محفوظة</span>
+      <div class="ftr__word" aria-hidden="true">
+        <svg viewBox="0 0 312 176" focusable="false"><use href="assets/img/sprite.svg?v=1#calli"/></svg>
+      </div>
+      <div class="ftr__bottom">
+        <span><span dir="ltr">© <span data-year>2026</span></span> سابغات للحلول القانونية، جميع الحقوق محفوظة</span>
+        <!-- TODO: من العميل — رقم الترخيص المهني ورقم السجل التجاري -->
         <span>المملكة العربية السعودية</span>
+        <a class="totop" href="#top"><span>العودة للأعلى</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/img/sprite.svg?v=1#i-up"/></svg></a>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/vendor/gsap.min.js?v=3.15.0" defer></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js?v=3.15.0" defer></script>
+  <script src="assets/js/vendor/lenis.min.js?v=1.3.26" defer></script>
+  <script src="assets/js/main.js?v=1" defer></script>
 </body>
 </html>

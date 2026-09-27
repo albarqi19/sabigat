@@ -1,0 +1,3 @@
+cov_*.npy
+lab_*.npy
+preview*.svg

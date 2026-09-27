@@ -1,0 +1,84 @@
+    <!-- ================= بطل الصفحة: القلم يخط سطرا ================= -->
+    <section class="phero phero--contact">
+      <div class="phero__in wrap">
+        <div class="phero__text">
+          <nav class="crumbs" aria-label="مسار الصفحة" data-rise>
+            <a href="index.html">الرئيسية</a><span aria-hidden="true">/</span><span aria-current="page">تواصل معنا</span>
+          </nav>
+          <h1 class="phero__t" data-words>اطلب خدمتك القانونية</h1>
+          <p class="phero__lead" data-rise>أخبرنا باحتياجك، وسيتواصل معك المختص من فريق سابغات في أقرب وقت.</p>
+        </div>
+        <div class="phero__art art-pen" aria-hidden="true">
+          <svg viewBox="{{PEN_VB}}" focusable="false">
+            <use class="pen-body" href="{{SPRITE}}#p-pillar"/>
+            <use class="pen-line" href="{{SPRITE}}#p-c3"/>
+            <use class="pen-dot" href="{{SPRITE}}#p-d2"/>
+            <use class="pen-dot" href="{{SPRITE}}#p-d3"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= القنوات والنموذج ================= -->
+    <section class="contact sec">
+      <div class="wrap contact__grid">
+        <div class="channels">
+          <h2 class="eyebrow" data-rise>قنوات التواصل</h2>
+          <div class="ch" data-rise>
+            <p class="ch__l">البريد الإلكتروني</p>
+            <div class="ch__row">
+              <a class="ch__v" href="mailto:info@sabigat.com" dir="ltr">info@sabigat.com</a>
+              <button class="copy" type="button" data-copy="info@sabigat.com" aria-label="نسخ البريد الإلكتروني">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="{{SPRITE}}#i-copy"/></svg><span>نسخ</span>
+              </button>
+            </div>
+          </div>
+          <div class="ch" data-rise>
+            <p class="ch__l">بوابة العملاء</p>
+            <a class="ch__v ch__link" href="https://sabigat.com/Fares/authentication/login"><span>الدخول إلى منصة سابغات</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="{{SPRITE}}#i-arrow"/></svg></a>
+          </div>
+          <div class="ch" data-rise>
+            <p class="ch__l">نطاق الخدمة</p>
+            <p class="ch__v">المملكة العربية السعودية وخارجها</p>
+          </div>
+          <!-- TODO: من العميل — رقم الهاتف tel: / واتساب wa.me / العنوان الوطني / ساعات العمل -->
+        </div>
+
+        <form class="form" id="service-form" action="mailto:info@sabigat.com" method="post" enctype="text/plain" data-rise>
+          <div class="form__row">
+            <div class="field">
+              <input type="text" id="f-name" name="name" autocomplete="name" placeholder=" " required>
+              <label for="f-name">الاسم الكامل</label>
+            </div>
+            <div class="field">
+              <input type="tel" id="f-phone" name="phone" autocomplete="tel" dir="ltr" placeholder=" " required>
+              <label for="f-phone">رقم الجوال</label>
+            </div>
+          </div>
+          <div class="field">
+            <input type="email" id="f-email" name="email" autocomplete="email" dir="ltr" placeholder=" " required>
+            <label for="f-email">البريد الإلكتروني</label>
+          </div>
+          <fieldset class="pick">
+            <legend>الخدمة المطلوبة</legend>
+            <div class="pick__opts">
+              <label><input type="radio" name="service" value="المنشآت والكيانات" required><span>المنشآت والكيانات</span></label>
+              <label><input type="radio" name="service" value="القطاع غير الربحي"><span>القطاع غير الربحي</span></label>
+              <label><input type="radio" name="service" value="أعمال المنازعات"><span>أعمال المنازعات</span></label>
+              <label><input type="radio" name="service" value="أعمال التوثيق"><span>أعمال التوثيق</span></label>
+              <label><input type="radio" name="service" value="استشارة قانونية"><span>استشارة قانونية</span></label>
+              <label><input type="radio" name="service" value="أخرى"><span>أخرى</span></label>
+            </div>
+          </fieldset>
+          <div class="field field--area">
+            <textarea id="f-message" name="message" rows="5" placeholder=" " required></textarea>
+            <label for="f-message">تفاصيل الطلب</label>
+          </div>
+          <div class="form__foot">
+            <button class="btn btn--slate" type="submit"><span>إرسال الطلب</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="{{SPRITE}}#i-arrow"/></svg></button>
+            <p class="form__note" id="form-done" role="status" hidden>سيفتح برنامج البريد لديك برسالة جاهزة، أرسلها لتصلنا مباشرة.</p>
+          </div>
+          <p class="form__note">بإرسالك الطلب سيفتح برنامج البريد لديك برسالة موجهة إلى <span dir="ltr">info@sabigat.com</span>، ويمكنك أيضا مراسلتنا مباشرة على <a href="mailto:info@sabigat.com" dir="ltr">info@sabigat.com</a></p>
+        </form>
+      </div>
+    </section>
