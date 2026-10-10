@@ -15,7 +15,7 @@ from pathlib import Path
 
 SRC = Path(__file__).resolve().parent
 OUT = SRC.parent
-V = "2"
+V = "3"
 P = json.loads((SRC / "parts.json").read_text(encoding="utf-8"))
 
 AR_DIGITS = str.maketrans("0123456789", "٠١٢٣٤٥٦٧٨٩")
@@ -124,10 +124,18 @@ JSONLD = """  <script type="application/ld+json">
     "logo": "https://sabigat.com/assets/img/og-image.png",
     "image": "https://sabigat.com/assets/img/og-image.png",
     "email": "info@sabigat.com",
+    "telephone": "+966532858886",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "حي اليرموك",
+      "addressLocality": "المبرز",
+      "addressCountry": "SA"
+    },
+    "openingHours": "Sa,Su,Mo,Tu,We,Th 09:00-17:00",
     "areaServed": "SA"
   }
   </script>
-  <!-- TODO: من العميل — رقم الترخيص (identifier) ورقم الهاتف والعنوان الوطني لإكمال JSON-LD -->
+  <!-- TODO: من العميل — رقم الترخيص (identifier) ورقم السجل التجاري -->
 """
 
 PAGES = [
